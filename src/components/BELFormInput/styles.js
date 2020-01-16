@@ -16,5 +16,10 @@ export default StyleSheet.create({
   input: {
     color: 'black',
     fontSize: 12
+  },
+  verifyText: {
+    color: '#009E9D',
+    fontSize: 10,
+    fontWeight: 'bold'
   }
 })

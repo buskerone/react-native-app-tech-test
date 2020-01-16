@@ -108,6 +108,7 @@ const RegistrationFormScreen = props => {
                 iconName="ios-call"
                 iconColor="#009E9D"
                 keyboardType="number-pad"
+                showVerifyButton={true}
               />
               <BELErrorMessage errorValue={touched.phoneNumber && errors.phoneNumber} />
               <BELFormInput
