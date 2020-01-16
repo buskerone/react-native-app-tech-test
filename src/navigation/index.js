@@ -5,7 +5,7 @@ import RegistrationLookScreen from '../screens/RegistrationScreens/RegistrationL
 
 const headerTitleStyle = {
   color: '#009E9D',
-  fontSize: 13,
+  fontSize: 13
 };
 
 const AppNavigator = createStackNavigator({
@@ -20,7 +20,12 @@ const AppNavigator = createStackNavigator({
     screen: RegistrationLookScreen,
     navigationOptions: () => ({
       title: 'PELO, MAQUILLAJE',
-      headerTitleStyle
+      headerTitleStyle,
+      headerBackTitleStyle: {
+        color: '#009E9D',
+        fontSize: 13
+      },
+      headerBackTitle: 'Atrás'
     }),
   },
 

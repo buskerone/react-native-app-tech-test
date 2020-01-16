@@ -3,10 +3,11 @@ import { REGISTER_USER } from '../actions/actionTypes';
 const initialState = null;
 
 const userReducer = (state = initialState, action) => {
+  console.log('action', action)
   switch (action.type) {
     case REGISTER_USER:
       return {
-        name: action.name,
+        firstName: action.firstName,
         lastName: action.lastName,
         phoneNumber: action.phoneNumber,
         email: action.email,

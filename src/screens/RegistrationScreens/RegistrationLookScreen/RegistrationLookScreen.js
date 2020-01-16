@@ -4,14 +4,14 @@ import {
   FlatList,
   Image,
   TouchableOpacity,
+  Alert
 } from 'react-native';
 import { connect } from 'react-redux';
 import { setLook } from '../../../redux/actions/look';
-import BELModal from '../../../components/BELModal';
 import images from '../../../assets';
 import styles from './styles';
 
-const RegistrationLookScreen = (props) => {
+const RegistrationLookScreen = props => {
   const totalColumns = 3;
 
   const formatData = (data, totalColumns) => {
@@ -26,19 +26,10 @@ const RegistrationLookScreen = (props) => {
     return data;
   };
 
-  hairStylePressed = (selectedItem) => {
+  hairStylePressed = selectedItem => {
     props.setLook(selectedItem);
-    renderModal(selectedItem);
-  };
-
-  renderModal = selectedImage => {
-    return (
-      <BELModal
-        animation="bottom"
-        imageSource={images[selectedImage].src}
-        message={`Gracias por registrarte ${props.user}, revisa tu email para confirmar tu cuenta!`}
-      />
-    );
+    console.log(props)
+    Alert.alert(`Haz seleccionado el look Nº${selectedItem}. Gracias por registrarte ${props.user.firstName} ${props.user.lastName}, revisa tu email para confirmar tu cuenta!`);
   };
 
   renderItem = ({ item, index }) => {
@@ -66,8 +57,8 @@ const RegistrationLookScreen = (props) => {
   );
 };
 
-const mapStateToProps = () => ({
-  //
+const mapStateToProps = (user) => ({
+  user: user.user
 });
 
 const mapDispatchToProps = {

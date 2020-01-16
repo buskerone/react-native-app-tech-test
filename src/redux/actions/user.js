@@ -2,7 +2,7 @@ import { REGISTER_USER } from './actionTypes';
 
 export const registerUser = data => ({
   type: REGISTER_USER,
-  name: data.name,
+  firstName: data.firstName,
   lastName: data.lastName,
   phoneNumber: data.phoneNumber,
   email: data.email,

@@ -2,7 +2,9 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   inputContainer: {
-    margin: 20
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 15,
   },
   iconStyle: {
     marginRight: 10
