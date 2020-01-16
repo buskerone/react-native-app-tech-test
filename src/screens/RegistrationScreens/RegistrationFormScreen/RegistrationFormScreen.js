@@ -7,8 +7,10 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
+import { connect } from 'react-redux';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { useForm, Controller } from "react-hook-form";
+import { useForm, Controller } from 'react-hook-form';
+import { registerUser } from '../../../redux/actions/user'
 import styles from './styles';
 
 const RegistrationFormScreen = () => {
@@ -77,4 +79,15 @@ const RegistrationFormScreen = () => {
   );
 };
 
-export default RegistrationFormScreen;
+const mapStateToProps = () => ({
+  //
+});
+
+const mapDispatchToProps = {
+  registerUser,
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(RegistrationFormScreen);

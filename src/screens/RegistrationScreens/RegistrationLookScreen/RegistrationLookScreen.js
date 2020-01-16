@@ -4,10 +4,12 @@ import {
   FlatList,
   Image,
 } from 'react-native';
-import styles from './styles';
+import { connect } from 'react-redux';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { setLook } from '../../../redux/actions/looks';
+import styles from './styles';
 
-const RegistrationLookScreen = () => {
+const RegistrationLookScreen = (props) => {
   const totalColumns = 3;
   const data = [
     {
@@ -57,7 +59,7 @@ const RegistrationLookScreen = () => {
   };
 
   hairStylePressed = (selectedItem) => {
-    console.log('selected item', selectedItem);
+    props.setLook(selectedItem);
   };
 
   renderItem = ({ item, index }) => {
@@ -85,4 +87,15 @@ const RegistrationLookScreen = () => {
   );
 };
 
-export default RegistrationLookScreen;
+const mapStateToProps = () => ({
+  //
+});
+
+const mapDispatchToProps = {
+  setLook,
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(RegistrationLookScreen);
