@@ -4,8 +4,9 @@ This is a demo app for a technical test.
 ## Instructions
 
  1. `yarn` or `yarn install`
- 2.  iOS: `react-native run-ios` 
- 3. Android: `react-native run-android`
+ 2. Install pods `cd ios` -> `pod install`
+ 3. iOS: `react-native run-ios`
+ 4. Android: `react-native run-android`
 
 ## Folder structure
 
@@ -20,7 +21,7 @@ This is a demo app for a technical test.
 		- RegistrationScreens
 			- RegistrationFormScreen
 			- RegistrationLookScreen
-	
+
 
 ## Dependencies
 
