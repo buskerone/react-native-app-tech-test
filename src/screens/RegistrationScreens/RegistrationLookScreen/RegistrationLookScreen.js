@@ -3,9 +3,9 @@ import {
   View,
   FlatList,
   Image,
+  TouchableOpacity,
 } from 'react-native';
 import { connect } from 'react-redux';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import { setLook } from '../../../redux/actions/look';
 import BELModal from '../../../components/BELModal';
 import images from '../../../assets';

@@ -8,26 +8,31 @@ import {
 } from 'react-native';
 import styles from './styles';
 
-export default props => {
-  return (
-    <Modal
-      transparent
-      animationType={props.animation}
-      onRequestClose={() => {}}
-    >
-      <View style={styles.modalContainer}>
-        <Image
-          source={props.imageSource}
-          style={styles.hairStyleImage}
-        />
-        <Text style={styles.messageText}>{props.message}</Text>
-        <TouchableOpacity
-          style={styles.closeButton}
-          onPress={() => {}}
-        >
-          <Text style={styles.buttonText}>FINALIZAR</Text>
-        </TouchableOpacity>
-      </View>
-    </Modal>
-  );
-};
+const BELModal = ({
+  animation,
+  imageSource,
+  message,
+  visible
+}) => (
+  <Modal
+    transparent
+    animationType={animation}
+    onRequestClose={() => {}}
+  >
+    <View style={styles.modalContainer}>
+      <Image
+        source={imageSource}
+        style={styles.hairStyleImage}
+      />
+      <Text style={styles.messageText}>{message}</Text>
+      <TouchableOpacity
+        style={styles.closeButton}
+        onPress={() => {}}
+      >
+        <Text style={styles.buttonText}>FINALIZAR</Text>
+      </TouchableOpacity>
+    </View>
+  </Modal>
+);
+
+export default BELModal;

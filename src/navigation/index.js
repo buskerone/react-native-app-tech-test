@@ -9,13 +9,6 @@ const headerTitleStyle = {
 };
 
 const AppNavigator = createStackNavigator({
-  SelectLook: {
-    screen: RegistrationLookScreen,
-    navigationOptions: () => ({
-      title: 'PELO, MAQUILLAJE',
-      headerTitleStyle
-    }),
-  },
   RegisterForm: {
     screen: RegistrationFormScreen,
     navigationOptions: () => ({
@@ -23,6 +16,14 @@ const AppNavigator = createStackNavigator({
       headerTitleStyle
     }),
   },
+  SelectLook: {
+    screen: RegistrationLookScreen,
+    navigationOptions: () => ({
+      title: 'PELO, MAQUILLAJE',
+      headerTitleStyle
+    }),
+  },
+
 }, {
   initialRouteParams: 'RegistrationFormScreen',
 });

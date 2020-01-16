@@ -4,7 +4,7 @@ export default StyleSheet.create({
   container: {
     backgroundColor: 'white',
   },
-  buttonContainer: {
+  button: {
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 20,
@@ -18,14 +18,17 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     color: 'white'
   },
-  termsAndConditionsContainer: {
-    margin: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   termsAndConditionsText: {
     color: 'black',
     textAlign: 'center',
+    fontSize: 11,
+    margin: 20,
+  },
+  termsAndConditionsUnderlineText: {
+    color: '#009E9D',
+    textDecorationLine: 'underline',
+    fontWeight: 'bold',
+    fontSize: 11,
   },
   input: {
     backgroundColor: 'white',

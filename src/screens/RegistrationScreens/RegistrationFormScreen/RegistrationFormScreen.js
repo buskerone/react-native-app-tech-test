@@ -1,29 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
-  View,
   SafeAreaView,
   StatusBar,
   TextInput,
   TouchableOpacity,
   Text,
+  TouchableWithoutFeedback,
 } from 'react-native';
 import { connect } from 'react-redux';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { useForm, Controller } from 'react-hook-form';
-import { registerUser } from '../../../redux/actions/user'
+import BELFormInput from '../../../components/BELFormInput';
+import { registerUser } from '../../../redux/actions/user';
 import styles from './styles';
 
-const RegistrationFormScreen = () => {
-  const { register, setValue, errors, triggerValidation, control, handleSubmit } = useForm();
-
-  const onSubmit = data => {
-    console.log(data);
-  };
-
-  const onChange = args => {
-    return {
-      value: args[0].nativeEvent.text,
-    };
+const RegistrationFormScreen = props => {
+  onSubmit = data => {
+    console.log('data',data);
+    props.registerUser(data);
   };
 
   return(
@@ -31,46 +24,63 @@ const RegistrationFormScreen = () => {
       <StatusBar barStyle="dark-content" />
       <KeyboardAwareScrollView style={styles.container}>
         <SafeAreaView>
-          <Controller
-            as={<TextInput placeholder="Nombre" style={styles.input} />}
-            onChange={onChange}
-            control={control}
+          <BELFormInput
             name="firstName"
+            value={""}
+            placeholder="Nombre"
+            onChangeText={() => {}}
+            iconName="ios-person"
+            iconColor="#009E9D"
           />
-          <Controller
-            as={<TextInput placeholder="Apellido" style={styles.input} />}
+          <BELFormInput
             name="lastName"
-            control={control}
-            onChange={onChange}
+            value={""}
+            placeholder="Apellido"
+            onChangeText={() => {}}
+            iconName="ios-person"
+            iconColor="#009E9D"
           />
-          <Controller
-            as={<TextInput placeholder="Teléfono" style={styles.input} />}
+          <BELFormInput
             name="phoneNumber"
-            control={control}
-            onChange={onChange}
+            value={""}
+            placeholder="Teléfono"
+            onChangeText={() => {}}
+            iconName="ios-call"
+            iconColor="#009E9D"
           />
-          <Controller
-            as={<TextInput placeholder="Correo electrónico" style={styles.input} />}
+          <BELFormInput
             name="email"
-            control={control}
-            onChange={onChange}
+            value={""}
+            placeholder="Correo electrónico"
+            autocapitalize="none"
+            onChangeText={() => {}}
+            iconName="ios-mail"
+            iconColor="#009E9D"
           />
-          <Controller
-            as={<TextInput placeholder="Contraseña" style={styles.input} />}
+          <BELFormInput
             name="password"
-            control={control}
-            onChange={onChange}
+            value={""}
+            placeholder="Contraseña"
+            onChangeText={() => {}}
+            secureTextEntry
+            iconName="ios-lock"
+            iconColor="#009E9D"
           />
-          <Controller
-            as={<TextInput placeholder="Dirección" style={styles.input} />}
+          <BELFormInput
             name="address"
-            control={control}
-            onChange={onChange}
+            value={""}
+            placeholder="Dirección"
+            onChangeText={() => {}}
+            iconName="ios-pin"
+            iconColor="#009E9D"
           />
-          <View style={styles.termsAndConditionsContainer}>
-            <Text style={styles.termsAndConditionsText}>Al presionar "Registrarme" estás de acuerdo con nuestros términos y condiciones de uso</Text>
-          </View>
-          <TouchableOpacity style={styles.buttonContainer}>
+          <TouchableWithoutFeedback>
+            <Text style={styles.termsAndConditionsText}>Al presionar "Registrarme" estás de acuerdo con nuestros <Text style={styles.termsAndConditionsUnderlineText}>términos y condiciones de uso</Text></Text>
+          </TouchableWithoutFeedback>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={onSubmit}
+          >
             <Text style={styles.buttonText}>REGISTRARME</Text>
           </TouchableOpacity>
         </SafeAreaView>
