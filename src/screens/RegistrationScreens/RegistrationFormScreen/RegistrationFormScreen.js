@@ -51,7 +51,6 @@ const RegistrationFormScreen = props => {
       values.email.length > 0 &&
       values.password.length > 0 &&
       values.address.length > 0) {
-        console.log(values);
         props.registerUser(values);
         props.navigation.navigate('SelectLook');
     }

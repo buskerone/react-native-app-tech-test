@@ -28,7 +28,6 @@ const RegistrationLookScreen = props => {
 
   hairStylePressed = selectedItem => {
     props.setLook(selectedItem);
-    console.log(props)
     Alert.alert(`Haz seleccionado el look Nº${selectedItem}. Gracias por registrarte ${props.user.firstName} ${props.user.lastName}, revisa tu email para confirmar tu cuenta!`);
   };
 
