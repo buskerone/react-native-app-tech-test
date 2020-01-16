@@ -11,7 +11,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import { useForm, Controller } from "react-hook-form";
 import styles from './styles';
 
-export default function RegistrationFormScreen() {
+const RegistrationFormScreen = () => {
   const { register, setValue, errors, triggerValidation, control, handleSubmit } = useForm();
 
   const onSubmit = data => {
@@ -75,4 +75,6 @@ export default function RegistrationFormScreen() {
       </KeyboardAwareScrollView>
     </>
   );
-}
+};
+
+export default RegistrationFormScreen;

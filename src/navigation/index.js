@@ -4,14 +4,14 @@ import RegistrationFormScreen from '../screens/RegistrationScreens/RegistrationF
 import RegistrationLookScreen from '../screens/RegistrationScreens/RegistrationLookScreen';
 
 const AppNavigator = createStackNavigator({
-  RegisterForm: {
-    screen: RegistrationFormScreen,
-  },
   SelectLook: {
     screen: RegistrationLookScreen,
   },
+  RegisterForm: {
+    screen: RegistrationFormScreen,
+  },
 }, {
-  initialRouteParams: 'RegsitrationFormScreen',
+  initialRouteParams: 'RegistrationFormScreen',
 });
 
 export default createAppContainer(AppNavigator);
