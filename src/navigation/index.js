@@ -6,9 +6,23 @@ import RegistrationLookScreen from '../screens/RegistrationScreens/RegistrationL
 const AppNavigator = createStackNavigator({
   SelectLook: {
     screen: RegistrationLookScreen,
+    navigationOptions: () => ({
+      title: 'PELO, MAQUILLAJE',
+      headerTitleStyle: {
+        color: '#009E9D',
+        fontSize: 13,
+      },
+    }),
   },
   RegisterForm: {
     screen: RegistrationFormScreen,
+    navigationOptions: () => ({
+      title: 'REGISTRO',
+      headerTitleStyle: {
+        color: '#009E9D',
+        fontSize: 13,
+      },
+    }),
   },
 }, {
   initialRouteParams: 'RegistrationFormScreen',
