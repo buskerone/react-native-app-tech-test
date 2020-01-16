@@ -5,10 +5,7 @@ const initialState = null;
 const lookReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_LOOK:
-      return {
-        ...state,
-        ...action.payload,
-      };
+      return { id: action.id };
     default:
       return state;
   }

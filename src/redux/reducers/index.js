@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
 import user from './user';
-import looks from './looks';
+import look from './look';
 
 const combinedReducers = combineReducers({
   user,
-  looks,
+  look,
 });
 
 export default combinedReducers;

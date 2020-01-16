@@ -1,2 +1,2 @@
 export { default as user } from './user';
-export { default as looks } from './looks';
+export { default as look } from './look';
