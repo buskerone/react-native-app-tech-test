@@ -1,4 +1,4 @@
-import { REGISTER_USER } from './actionTypes';
+import {REGISTER_USER} from './actionTypes';
 
 export const registerUser = data => ({
   type: REGISTER_USER,

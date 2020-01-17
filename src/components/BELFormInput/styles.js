@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   inputContainer: {
@@ -7,19 +7,19 @@ export default StyleSheet.create({
     marginTop: 15,
   },
   iconStyle: {
-    marginRight: 10
+    marginRight: 10,
   },
   placeholder: {
     fontSize: 11,
-    color: 'grey'
+    color: 'grey',
   },
   input: {
     color: 'black',
-    fontSize: 12
+    fontSize: 12,
   },
   verifyText: {
     color: '#009E9D',
     fontSize: 10,
-    fontWeight: 'bold'
-  }
-})
+    fontWeight: 'bold',
+  },
+});

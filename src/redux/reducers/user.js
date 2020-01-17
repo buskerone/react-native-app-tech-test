@@ -1,9 +1,9 @@
-import { REGISTER_USER } from '../actions/actionTypes';
+import {REGISTER_USER} from '../actions/actionTypes';
 
 const initialState = null;
 
 const userReducer = (state = initialState, action) => {
-  console.log('action', action)
+  console.log('action', action);
   switch (action.type) {
     case REGISTER_USER:
       return {

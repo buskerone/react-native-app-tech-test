@@ -1,12 +1,12 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
     marginTop: 5,
-    marginLeft: 40
+    marginLeft: 40,
   },
   errorText: {
     color: 'red',
-    fontSize: 12
-  }
-})
+    fontSize: 12,
+  },
+});

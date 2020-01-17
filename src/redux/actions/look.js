@@ -1,8 +1,8 @@
-import { SET_LOOK } from './actionTypes';
+import {SET_LOOK} from './actionTypes';
 
 export const setLook = id => ({
   type: SET_LOOK,
-  id
+  id,
 });
 
 const look = {
