@@ -72,7 +72,7 @@ const RegistrationFormScreen = props => {
               address: '',
             }}
             onSubmit={values => {
-              this.handleSubmit(values);
+              handleSubmit(values);
             }}
             validationSchema={validationSchema}>
             {({handleChange, values, handleSubmit, errors, touched}) => (
