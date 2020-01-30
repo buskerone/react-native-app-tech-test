@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'Belin' do
-  # Pods for Belin
+target 'TechTest' do
+  # Pods for TechTest
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -35,7 +35,7 @@ target 'Belin' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
 
-  target 'BelinTests' do
+  target 'TechTestTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -43,10 +43,10 @@ target 'Belin' do
   use_native_modules!
 end
 
-target 'Belin-tvOS' do
-  # Pods for Belin-tvOS
+target 'TechTest-tvOS' do
+  # Pods for TechTest-tvOS
 
-  target 'Belin-tvOSTests' do
+  target 'TechTest-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
