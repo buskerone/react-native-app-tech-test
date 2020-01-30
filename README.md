@@ -3,6 +3,8 @@ This app consist in two screens:
 - Registration p1 (user data + validation)
 - Registration p2 (array of looks where you can choose one and save it to local storage)
 
+![rnapp](https://user-images.githubusercontent.com/2034112/73492059-afad2b00-438e-11ea-90d6-ac6f4194cdb9.png)
+
 ## Instructions
 
  1. `yarn` or `yarn install`
@@ -23,18 +25,6 @@ This app consist in two screens:
 		- RegistrationScreens
 			- RegistrationFormScreen
 			- RegistrationLookScreen
-
-## Screenshots
-
-### iOS
-<img width="200" alt="iosregistrationform1" src="https://user-images.githubusercontent.com/2034112/72565744-465af180-3891-11ea-9f27-128018e8ac9b.png">
-<img width="200" alt="iosregistrationform2" src="https://user-images.githubusercontent.com/2034112/72565743-465af180-3891-11ea-93eb-fcacf1821511.png">
-<img width="200" alt="ioslooks" src="https://user-images.githubusercontent.com/2034112/72565742-45c25b00-3891-11ea-81a4-855de86263c0.png">
-
-### Android
-<img width="200" alt="androidregistrationform1" src="https://user-images.githubusercontent.com/2034112/72565741-45c25b00-3891-11ea-8ee3-c0b3a48a0252.png">
-<img width="200" alt="androidregistrationform2" src="https://user-images.githubusercontent.com/2034112/72565740-45c25b00-3891-11ea-87aa-0b16e8f01606.png">
-<img width="200" alt="androidlooks" src="https://user-images.githubusercontent.com/2034112/72565738-4529c480-3891-11ea-8a78-4294c427ba63.png">
 
 ## Dependencies
 
