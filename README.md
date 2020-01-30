@@ -1,5 +1,7 @@
-# Belin App
-This is a demo app for a technical test.
+# App
+This app consist in two screens:
+- Registration p1 (user data + validation)
+- Registration p2 (array of looks where you can choose one and save it to local storage)
 
 ## Instructions
 
