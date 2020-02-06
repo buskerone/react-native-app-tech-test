@@ -1,11 +1,12 @@
 import React from 'react';
 import {Input} from 'react-native-elements';
 import {View, Text} from 'react-native';
+import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
-const BELFormInput = ({
+const RNATTFormInput = ({
   name,
   placeholder,
   iconName,
@@ -38,4 +39,15 @@ const BELFormInput = ({
   </View>
 );
 
-export default BELFormInput;
+RNATTFormInput.propTypes = {
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  iconName: PropTypes.string.isRequired,
+  iconColor: PropTypes.string.isRequired,
+  returnKeyType: PropTypes.string,
+  keyboardType: PropTypes.string,
+  autoCapitalize: PropTypes.string,
+  showVerifyButton: PropTypes.bool,
+};
+
+export default RNATTFormInput;

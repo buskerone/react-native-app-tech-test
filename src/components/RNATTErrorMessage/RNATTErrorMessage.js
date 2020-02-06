@@ -1,11 +1,16 @@
 import React from 'react';
 import {View, Text} from 'react-native';
+import PropTypes from 'prop-types';
 import styles from './styles';
 
-const BELErrorMessage = ({errorValue}) => (
+const RNATTErrorMessage = ({errorValue}) => (
   <View style={styles.container}>
     <Text style={styles.errorText}>{errorValue}</Text>
   </View>
 );
 
-export default BELErrorMessage;
+RNATTErrorMessage.propTypes = {
+  errorValue: PropTypes.string,
+};
+
+export default RNATTErrorMessage;

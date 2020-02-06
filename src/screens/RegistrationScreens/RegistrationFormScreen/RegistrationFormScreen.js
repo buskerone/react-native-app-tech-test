@@ -8,11 +8,12 @@ import {
   View,
 } from 'react-native';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
-import BELFormInput from '../../../components/BELFormInput';
-import BELErrorMessage from '../../../components/BELErrorMessage';
+import RNATTFormInput from '../../../components/RNATTFormInput';
+import RNATTErrorMessage from '../../../components/RNATTErrorMessage';
 import {registerUser} from '../../../redux/actions/user';
 import styles from './styles';
 
@@ -77,7 +78,7 @@ const RegistrationFormScreen = props => {
             validationSchema={validationSchema}>
             {({handleChange, values, handleSubmit, errors, touched}) => (
               <View>
-                <BELFormInput
+                <RNATTFormInput
                   name="firstName"
                   value={values.firstName}
                   placeholder="Nombre"
@@ -85,10 +86,10 @@ const RegistrationFormScreen = props => {
                   iconName="ios-person"
                   iconColor="#009E9D"
                 />
-                <BELErrorMessage
+                <RNATTErrorMessage
                   errorValue={touched.firstName && errors.firstName}
                 />
-                <BELFormInput
+                <RNATTFormInput
                   name="lastName"
                   value={values.lastName}
                   placeholder="Apellido"
@@ -96,10 +97,10 @@ const RegistrationFormScreen = props => {
                   iconName="ios-person"
                   iconColor="#009E9D"
                 />
-                <BELErrorMessage
+                <RNATTErrorMessage
                   errorValue={touched.lastName && errors.lastName}
                 />
-                <BELFormInput
+                <RNATTFormInput
                   name="phoneNumber"
                   value={values.phoneNumber}
                   placeholder="Teléfono"
@@ -109,10 +110,10 @@ const RegistrationFormScreen = props => {
                   keyboardType="number-pad"
                   showVerifyButton={true}
                 />
-                <BELErrorMessage
+                <RNATTErrorMessage
                   errorValue={touched.phoneNumber && errors.phoneNumber}
                 />
-                <BELFormInput
+                <RNATTFormInput
                   name="email"
                   value={values.email}
                   placeholder="Correo electrónico"
@@ -121,8 +122,8 @@ const RegistrationFormScreen = props => {
                   iconName="ios-mail"
                   iconColor="#009E9D"
                 />
-                <BELErrorMessage errorValue={touched.email && errors.email} />
-                <BELFormInput
+                <RNATTErrorMessage errorValue={touched.email && errors.email} />
+                <RNATTFormInput
                   name="password"
                   value={values.password}
                   placeholder="Contraseña"
@@ -131,10 +132,10 @@ const RegistrationFormScreen = props => {
                   iconName="ios-lock"
                   iconColor="#009E9D"
                 />
-                <BELErrorMessage
+                <RNATTErrorMessage
                   errorValue={touched.password && errors.password}
                 />
-                <BELFormInput
+                <RNATTFormInput
                   name="address"
                   value={values.address}
                   placeholder="Dirección"
@@ -142,7 +143,7 @@ const RegistrationFormScreen = props => {
                   iconName="ios-pin"
                   iconColor="#009E9D"
                 />
-                <BELErrorMessage
+                <RNATTErrorMessage
                   errorValue={touched.address && errors.address}
                 />
                 <TouchableWithoutFeedback>
@@ -171,6 +172,10 @@ const mapStateToProps = () => ({
 
 const mapDispatchToProps = {
   registerUser,
+};
+
+RegistrationFormScreen.propTypes = {
+  registerUser: PropTypes.func.isRequired,
 };
 
 export default connect(
