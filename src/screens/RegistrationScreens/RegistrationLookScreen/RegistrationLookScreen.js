@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, FlatList, Image, TouchableOpacity, Alert} from 'react-native';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {setLook} from '../../../redux/actions/look';
 import images from '../../../assets';
@@ -58,6 +59,18 @@ const mapStateToProps = user => ({
 
 const mapDispatchToProps = {
   setLook,
+};
+
+RegistrationLookScreen.propTypes = {
+  user: PropTypes.shape({
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    phoneNumber: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    password: PropTypes.string.isRequired,
+    address: PropTypes.string.isRequired,
+  }),
+  setLook: PropTypes.func.isRequired
 };
 
 export default connect(
